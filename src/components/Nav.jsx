@@ -1,6 +1,6 @@
 import React from "react";
 import { AppContext } from "../App";
-import ToggleTheme from "./toggleTheme/toggleTheme";
+import ToggleTheme from "./ToggleTheme/ToggleTheme";
 import "./ToggleTheme/ToggleTheme.css";
 import useScrollBlock from "../services/useScrollBlock";
 import { FiMenu } from "react-icons/fi";

@@ -4,6 +4,9 @@
   align-items: center;
   gap: 5px;
   z-index: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
 }
 .toggle--theme > svg {
   font-size: 20px;
@@ -11,10 +14,6 @@
 
 .sun--icon,
 .moon--icon {
-  color: black;
-}
-.dark-theme .moon--icon,
-.dark-theme .sun--icon {
   color: white;
 }
 

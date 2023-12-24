@@ -6,7 +6,7 @@
   z-index: 0;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-
+  padding: 10px;
 }
 .toggle--theme > svg {
   font-size: 20px;

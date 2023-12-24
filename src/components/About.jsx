@@ -1,11 +1,13 @@
 import React from "react";
 import lines from "../assets/images/line-dec.png";
 import dumbbell from "../assets/images/features-first-icon.png";
+import { AppContext } from "../App";
 
 export default function About() {
-  
+  const { currentSectionRefs } = React.useContext(AppContext);
+
   return (
-    <section className="about">
+    <section ref={(element) => currentSectionRefs.current[1] = element} id="about" className="about">
       <div className="container">
         <div className="section--header">
           <h2>

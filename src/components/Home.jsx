@@ -4,20 +4,26 @@ import MainButton from "./mainButton";
 import { AppContext } from "../App";
 
 export default function Home() {
-  const { homeRef, setHomeVisibility } = React.useContext(AppContext);
+  const { homeRef, setHomeVisibility, currentSectionRefs } =
+    React.useContext(AppContext);
   React.useEffect(() => {
     const options = {
       rootMargin: "-80px",
     };
-    const observer = new IntersectionObserver((entries) => {
+    const navObserver = new IntersectionObserver((entries) => {
       const entry = entries[0];
       setHomeVisibility(entry.isIntersecting);
     }, options);
-    observer.observe(homeRef.current);
+    navObserver.observe(homeRef.current);
   }, []);
 
+  function homeRefsMerged(element) {
+    homeRef.current = element;
+    currentSectionRefs.current[0] = element;
+  }
+
   return (
-    <section ref={homeRef} className="home">
+    <section ref={homeRefsMerged} id="home" className="home">
       <video autoPlay loop muted src={gymVideo} className="home--video"></video>
       <div className="container">
         <div className="home--caption">

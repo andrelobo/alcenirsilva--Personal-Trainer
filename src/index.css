@@ -27,6 +27,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -227,7 +231,7 @@ nav .signup--btn:hover {
 .toggle--theme {
   @media only screen and (min-width: 1200px) {
     position: absolute;
-    right: 25px;
+    right: 15px;
   }
 }
 
@@ -238,6 +242,11 @@ nav .signup--btn:hover {
   padding: 10px;
   cursor: pointer;
   color: var(--lightTheme-white);
+}
+
+nav .active {
+  color: var(--lightTheme-orange) !important;
+  font-weight: bold;
 }
 
 /* Fixed Nav */
@@ -289,6 +298,7 @@ nav .signup--btn:hover {
   color: var(--darkTheme-secondary-Color);
 }
 /* Fixed Nav */
+
 /* Nav Media Queries */
 @media only screen and (max-width: 576px) {
   .nav--logo {

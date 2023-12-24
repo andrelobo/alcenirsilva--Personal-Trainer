@@ -8,6 +8,7 @@ const AppContext = React.createContext();
 export { AppContext };
 
 export default function App() {
+  const currentSectionRefs = React.useRef([]) 
   const homeRef = React.useRef();
   const [homeVisibility, setHomeVisibility] = React.useState(true);
 
@@ -20,7 +21,14 @@ export default function App() {
 
   return (
     <AppContext.Provider
-      value={{ homeRef, homeVisibility, setHomeVisibility, theme, toggleTheme }}
+      value={{
+        homeRef,
+        homeVisibility,
+        setHomeVisibility,
+        theme,
+        toggleTheme,
+        currentSectionRefs
+      }}
     >
       <div className={`${theme}`}>
         <Nav />

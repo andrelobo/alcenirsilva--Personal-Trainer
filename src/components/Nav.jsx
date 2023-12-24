@@ -15,10 +15,12 @@ export default function Nav() {
   const [showMenu, setShowMenu] = React.useState(false);
   function toggleMenu() {
     setShowMenu((prevShowMenu) => !prevShowMenu);
-    if (showMenu) {
-      allowScroll();
-    } else {
-      blockScroll();
+    if (!isBigWindow) {
+      if (showMenu) {
+        allowScroll();
+      } else {
+        blockScroll();
+      }
     }
   }
   const windowWidth = window.innerWidth;

@@ -36,7 +36,7 @@ export default function About() {
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Basic Fitness</div>
+              <div className="card--title">Advanced Muscle Course</div>
               <div className="card--desc">
                 Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
                 nisi. Integer nibh sapien, vehicula et auctor.
@@ -47,7 +47,7 @@ export default function About() {
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Basic Fitness</div>
+              <div className="card--title">New Gym Training</div>
               <div className="card--desc">
                 Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
                 nisi. Integer nibh sapien, vehicula et auctor.
@@ -58,7 +58,7 @@ export default function About() {
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Basic Fitness</div>
+              <div className="card--title">Yoga Training</div>
               <div className="card--desc">
                 Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
                 nisi. Integer nibh sapien, vehicula et auctor.
@@ -69,7 +69,7 @@ export default function About() {
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Basic Fitness</div>
+              <div className="card--title">Basic Muscle Course</div>
               <div className="card--desc">
                 Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
                 nisi. Integer nibh sapien, vehicula et auctor.
@@ -80,7 +80,7 @@ export default function About() {
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Basic Fitness</div>
+              <div className="card--title">Body Building Course</div>
               <div className="card--desc">
                 Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
                 nisi. Integer nibh sapien, vehicula et auctor.

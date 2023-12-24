@@ -43,7 +43,7 @@ export default function Nav() {
       windowWidth > 1057
         ? {
             threshold: 0.5,
-            rootMargin: "50% 0px -50% 0px",
+            rootMargin: "50% 0px -25% 0px",
           }
         : {
             threshold: 0,

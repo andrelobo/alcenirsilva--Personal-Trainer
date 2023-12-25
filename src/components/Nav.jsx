@@ -7,15 +7,16 @@ import { FiMenu } from "react-icons/fi";
 import { FaTimes } from "react-icons/fa";
 
 export default function Nav() {
-  const { homeVisibility, currentSectionRefs } = React.useContext(AppContext);
+  const navRefs = React.useRef([]);
+  const { homeVisibility, sectionRefs } = React.useContext(AppContext);
   const navClass = homeVisibility ? "nav--absolute" : "nav--fixed";
 
   const [blockScroll, allowScroll] = useScrollBlock();
 
   const [showMenu, setShowMenu] = React.useState(false);
   function toggleMenu() {
-    setShowMenu((prevShowMenu) => !prevShowMenu);
     if (!isBigWindow) {
+      setShowMenu((prevShowMenu) => !prevShowMenu);
       if (showMenu) {
         allowScroll();
       } else {
@@ -32,37 +33,47 @@ export default function Nav() {
     <FiMenu onClick={toggleMenu} className="menu--icon" />
   );
 
-  const [activeLink, setActiveLink] = React.useState({
+  const navStyles =
+    showMenu || isBigWindow ? { display: "flex" } : { display: "none" };
+
+  const [visibleSections, setVisibleSections] = React.useState({
     home: false,
     about: false,
     classes: false,
     schedules: false,
     contact: false,
   });
+  const visibleSectionsArray = Object.entries(visibleSections);
 
   React.useEffect(() => {
-    const currentSectionOptions =
-      windowWidth > 1057
-        ? {
-            threshold: 0.5,
-            rootMargin: "40% 0px -25% 0px",
-          }
-        : {
-            threshold: 0,
-            rootMargin: "-50% 0px -50% 0px",
-          };
-    const currentSectionObserver = new IntersectionObserver((entries) => {
+    const visibleSectionOptions = {
+      rootMargin: "-90px 0px 0px",
+    };
+    const visibleSectionObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const id = entry.target.id;
-        setActiveLink((prevActiveLink) => {
-          return { ...prevActiveLink, [`${id}`]: entry.isIntersecting };
+
+        setVisibleSections((prevVisibleSections) => {
+          return { ...prevVisibleSections, [`${id}`]: entry.isIntersecting };
         });
       });
-    }, currentSectionOptions);
-    currentSectionRefs.current.forEach((element) => {
-      currentSectionObserver.observe(element);
+    }, visibleSectionOptions);
+    sectionRefs.current.forEach((element) => {
+      visibleSectionObserver.observe(element);
     });
   }, []);
+
+  React.useEffect(() => {
+    let isActiveCheck = false;
+    visibleSectionsArray.forEach((section, index) => {
+      if (section[1] && !isActiveCheck) {
+        navRefs.current[index].classList.add("active");
+        isActiveCheck = true;
+      } else {
+        navRefs.current[index].classList.remove("active");
+      }
+    });
+  }, [visibleSections]);
 
   return (
     <nav className={`${navClass}`}>
@@ -72,55 +83,63 @@ export default function Nav() {
             training <span className="orange--word">studio</span>
           </a>
         </div>
-        {(showMenu || isBigWindow) && (
-          <ul className="nav--list slidein">
-            <li onClick={toggleMenu}>
-              <a
-                className={`nav--link ${activeLink.home ? "active" : ""}`}
-                href="#home"
-              >
-                home
-              </a>
-            </li>
-            <li onClick={toggleMenu}>
-              <a
-                className={`nav--link ${activeLink.about ? "active" : ""}`}
-                href="#about"
-              >
-                about
-              </a>
-            </li>
-            <li onClick={toggleMenu}>
-              <a
-                className={`nav--link ${activeLink.classes ? "active" : ""}`}
-                href="#classes"
-              >
-                classes
-              </a>
-            </li>
-            <li onClick={toggleMenu}>
-              <a
-                className={`nav--link ${activeLink.schedules ? "active" : ""}`}
-                href="#schedules"
-              >
-                schedules
-              </a>
-            </li>
-            <li onClick={toggleMenu}>
-              <a
-                className={`nav--link ${activeLink.contact ? "active" : ""}`}
-                href="#contact"
-              >
-                contact
-              </a>
-            </li>
-            <li>
-              <a className="nav--link signup--btn" href="#">
-                sign up
-              </a>
-            </li>
-          </ul>
-        )}
+        <ul style={navStyles} className="nav--list slidein">
+          <li onClick={toggleMenu}>
+            <a
+              id="nav--home"
+              className="nav--link"
+              href="#home"
+              ref={(element) => (navRefs.current[0] = element)}
+            >
+              home
+            </a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a
+              id="nav--about"
+              className="nav--link"
+              href="#about"
+              ref={(element) => (navRefs.current[1] = element)}
+            >
+              about
+            </a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a
+              id="nav--classes"
+              className="nav--link"
+              href="#classes"
+              ref={(element) => (navRefs.current[2] = element)}
+            >
+              classes
+            </a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a
+              id="nav--schedules"
+              className="nav--link"
+              href="#schedules"
+              ref={(element) => (navRefs.current[3] = element)}
+            >
+              schedules
+            </a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a
+              id="nav--contact"
+              className="nav--link"
+              href="#contact"
+              ref={(element) => (navRefs.current[4] = element)}
+            >
+              contact
+            </a>
+          </li>
+          <li>
+            <a className="nav--link signup--btn" href="#">
+              sign up
+            </a>
+          </li>
+        </ul>
         {isBigWindow ? (
           <ToggleTheme />
         ) : (

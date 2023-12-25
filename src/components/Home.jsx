@@ -4,7 +4,7 @@ import MainButton from "./mainButton";
 import { AppContext } from "../App";
 
 export default function Home() {
-  const { homeRef, setHomeVisibility, currentSectionRefs } =
+  const { homeRef, setHomeVisibility, sectionRefs } =
     React.useContext(AppContext);
   React.useEffect(() => {
     const options = {
@@ -19,7 +19,7 @@ export default function Home() {
 
   function homeRefsMerged(element) {
     homeRef.current = element;
-    currentSectionRefs.current[0] = element;
+    sectionRefs.current[0] = element;
   }
 
   return (

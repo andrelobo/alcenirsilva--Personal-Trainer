@@ -197,7 +197,7 @@ nav li {
 }
 
 nav li:hover .nav--link:not(.signup--btn) {
-  color: var(--lightTheme-orange);
+  color: var(--lightTheme-orange) !important;
 }
 
 .nav--link {

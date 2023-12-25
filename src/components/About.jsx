@@ -4,10 +4,10 @@ import dumbbell from "../assets/images/features-first-icon.png";
 import { AppContext } from "../App";
 
 export default function About() {
-  const { currentSectionRefs } = React.useContext(AppContext);
+  const { sectionRefs } = React.useContext(AppContext);
 
   return (
-    <section ref={(element) => currentSectionRefs.current[1] = element} id="about" className="about">
+    <section ref={(element) => sectionRefs.current[1] = element} id="about" className="about">
       <div className="container">
         <div className="section--header">
           <h2>

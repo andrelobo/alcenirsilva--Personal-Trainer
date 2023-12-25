@@ -8,7 +8,7 @@ const AppContext = React.createContext();
 export { AppContext };
 
 export default function App() {
-  const currentSectionRefs = React.useRef([]) 
+  const sectionRefs = React.useRef([]) 
   const homeRef = React.useRef();
   const [homeVisibility, setHomeVisibility] = React.useState(true);
 
@@ -27,7 +27,7 @@ export default function App() {
         setHomeVisibility,
         theme,
         toggleTheme,
-        currentSectionRefs
+        sectionRefs
       }}
     >
       <div className={`${theme}`}>

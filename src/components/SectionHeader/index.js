@@ -1,4 +1,4 @@
-import SectionHeader from "./Sectionheader";
+import SectionHeader from "./SectionHeader";
 import SectionTitle from "./SectionTitle";
 import SectionDesc from "./SectionDesc";
 

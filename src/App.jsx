@@ -1,14 +1,18 @@
 import React from "react";
+import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 import CallToAction from "./components/CallToAction";
-import Nav from "./components/Nav";
+import Classes from "./components/Classes";
+import Schedules from "./components/Schedules";
+import Trainers from "./components/Trainers";
+import Contact from "./components/Contact";
 
 const AppContext = React.createContext();
 export { AppContext };
 
 export default function App() {
-  const sectionRefs = React.useRef([]) 
+  const sectionRefs = React.useRef([]);
   const homeRef = React.useRef();
   const [homeVisibility, setHomeVisibility] = React.useState(true);
 
@@ -27,7 +31,7 @@ export default function App() {
         setHomeVisibility,
         theme,
         toggleTheme,
-        sectionRefs
+        sectionRefs,
       }}
     >
       <div className={`${theme}`}>
@@ -35,6 +39,10 @@ export default function App() {
         <Home />
         <About />
         <CallToAction />
+        <Classes />
+        <Schedules />
+        <Trainers />
+        <Contact />
       </div>
     </AppContext.Provider>
   );

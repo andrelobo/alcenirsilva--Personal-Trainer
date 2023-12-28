@@ -41,6 +41,7 @@ export default function Nav() {
     about: false,
     classes: false,
     schedules: false,
+    trainers: false,
     contact: false,
   });
   const visibleSectionsArray = Object.entries(visibleSections);
@@ -86,7 +87,6 @@ export default function Nav() {
         <ul style={navStyles} className="nav--list slidein">
           <li onClick={toggleMenu}>
             <a
-              id="nav--home"
               className="nav--link"
               href="#home"
               ref={(element) => (navRefs.current[0] = element)}
@@ -96,7 +96,6 @@ export default function Nav() {
           </li>
           <li onClick={toggleMenu}>
             <a
-              id="nav--about"
               className="nav--link"
               href="#about"
               ref={(element) => (navRefs.current[1] = element)}
@@ -106,7 +105,6 @@ export default function Nav() {
           </li>
           <li onClick={toggleMenu}>
             <a
-              id="nav--classes"
               className="nav--link"
               href="#classes"
               ref={(element) => (navRefs.current[2] = element)}
@@ -116,7 +114,6 @@ export default function Nav() {
           </li>
           <li onClick={toggleMenu}>
             <a
-              id="nav--schedules"
               className="nav--link"
               href="#schedules"
               ref={(element) => (navRefs.current[3] = element)}
@@ -126,10 +123,18 @@ export default function Nav() {
           </li>
           <li onClick={toggleMenu}>
             <a
-              id="nav--contact"
+              className="nav--link"
+              href="#trainers"
+              ref={(element) => (navRefs.current[4] = element)}
+            >
+              trainers
+            </a>
+          </li>
+          <li onClick={toggleMenu}>
+            <a
               className="nav--link"
               href="#contact"
-              ref={(element) => (navRefs.current[4] = element)}
+              ref={(element) => (navRefs.current[5] = element)}
             >
               contact
             </a>

@@ -1,26 +1,29 @@
 import React from "react";
-import lines from "../assets/images/line-dec.png";
 import dumbbell from "../assets/images/features-first-icon.png";
 import { AppContext } from "../App";
+import SectionHeader from "./SectionHeader/index";
 
 export default function About() {
   const { sectionRefs } = React.useContext(AppContext);
 
   return (
-    <section ref={(element) => sectionRefs.current[1] = element} id="about" className="about">
+    <section
+      ref={(element) => (sectionRefs.current[1] = element)}
+      id="about"
+      className="about"
+    >
       <div className="container">
-        <div className="section--header">
-          <h2>
+        <SectionHeader>
+          <SectionHeader.Title>
             choose <span className="orange--word">program</span>
-          </h2>
-          <img src={lines} />
-          <p>
+          </SectionHeader.Title>
+          <SectionHeader.Desc>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
             incidunt blanditiis autem at alias earum nobis ad eos doloremque
             quod totam, culpa sapiente quam harum provident dolores aliquid
             voluptatum dolor.
-          </p>
-        </div>
+          </SectionHeader.Desc>
+        </SectionHeader>
         <div className="about--card-container">
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />

@@ -21,6 +21,8 @@ export default function App() {
     setTheme((prevTheme) =>
       prevTheme === "light-theme" ? "dark-theme" : "light-theme"
     );
+    // For changing scrollbar colors between light & dark modes
+    document.querySelector("html").classList.toggle("dark-mode");
   }
 
   return (

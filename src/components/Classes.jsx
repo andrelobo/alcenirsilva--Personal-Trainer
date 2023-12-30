@@ -6,7 +6,48 @@ import dumbbell from "../assets/images/tabs-first-icon.png";
 
 export default function Classes() {
   const { sectionRefs } = React.useContext(AppContext);
-  const [classes, setClasses] = React.useState(data.trainingClasses);
+  const [classesData, setClasses] = React.useState(data.trainingClasses);
+  const [activeClassId, setActiveClassId] = React.useState(classesData[0].id);
+
+  function chooseClass(id) {
+    setActiveClassId(id);
+  }
+  const classesCards = classesData.map((classItem) => {
+    const activeClassStyle = activeClassId === classItem.id ? "active" : "";
+    return (
+      <div
+        key={classItem.id}
+        className={`classes--card ${activeClassStyle}`}
+        onClick={() => chooseClass(classItem.id)}
+      >
+        <img src={dumbbell} alt="icon" />
+        {classItem.name}
+      </div>
+    );
+  });
+  const displayClassesCards = classesCards.slice(0, 4);
+
+  const classesPreview = classesData.map((classItem) => {
+    return (
+      <div key={classItem.id} id={classItem.id} className="classes--classPreview">
+        <div className="classes--class-image">
+          <img
+            src={classItem.image}
+            alt="class--card-img"
+            className="classes--img"
+          />
+        </div>
+        <div className="classes--class-name">{classItem.name}</div>
+        <div className="classes--class-details">{classItem.details}</div>
+        <div className="main--button classes--classPreview-btn">
+          view schedule
+        </div>
+      </div>
+    );
+  });
+  const displayClassesPreview = classesPreview.filter(classItem => {
+    return classItem.props.id === activeClassId
+  })
 
   return (
     <section
@@ -26,40 +67,12 @@ export default function Classes() {
         </SectionHeader>
         <div className="classes--main">
           <div className="classes--list">
-            <div className="classes--card active">
-              <img src={dumbbell} alt="icon" />
-              {classes[0].name}
-            </div>
-            <div className="classes--card">
-              <img src={dumbbell} alt="icon" />
-              {classes[1].name}
-            </div>
-            <div className="classes--card">
-              <img src={dumbbell} alt="icon" />
-              {classes[2].name}
-            </div>
-            <div className="classes--card">
-              <img src={dumbbell} alt="icon" />
-              {classes[3].name}
-            </div>
+            {displayClassesCards}
             <div className="main--button classes--main-btn">
               view all schedules
             </div>
           </div>
-          <div className="classes--classPreview">
-            <div className="classes--class-image">
-              <img
-                src={classes[0].image}
-                alt="class--card-img"
-                className="classes--img"
-              />
-            </div>
-            <div className="classes--class-name">{classes[0].name}</div>
-            <div className="classes--class-details">{classes[0].details}</div>
-            <div className="main--button classes--classPreview-btn">
-              view schedule
-            </div>
-          </div>
+          {displayClassesPreview}
         </div>
       </div>
     </section>

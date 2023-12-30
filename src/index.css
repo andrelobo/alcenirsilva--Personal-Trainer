@@ -675,3 +675,75 @@ nav .active {
   }
 }
 /* Classes Section */
+
+/* Trainers Section*/
+.trainers--cards-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.trainer--card {
+  padding: 40px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  border-radius: 9px;
+}
+
+.trainer--image {
+  width: 100%;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.trainer--type {
+  color: var(--lightTheme-orange);
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.dark-theme .trainer--type {
+  color: var(--darkTheme-text--orange);
+}
+
+.trainer--name {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--lightTheme-secondary-Color);
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+.dark-theme .trainer--name {
+  color: var(--darkTheme-secondary-Color);
+}
+
+.trainer--details {
+  font-size: 14px;
+  line-height: 25px;
+  color: var(--lightTheme-gray);
+  margin-bottom: 20px
+}
+.dark-theme .trainer--details {
+  color: var(--darkTheme-text--gray);
+}
+
+.trainer--social {
+  display: flex;
+  gap: 12px;
+}
+
+.trainer--social > * {
+  cursor: pointer;
+  align-items: flex-end;
+  height: 16px;
+  color: var(--lightTheme-secondary-Color);
+}
+.dark-theme .trainer--social > * {
+  color: var(--darkTheme-secondary-Color);
+}
+
+.trainer--be {
+  font-size: 20px;
+}
+/* Trainers Section*/

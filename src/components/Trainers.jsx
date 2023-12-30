@@ -1,9 +1,33 @@
 import React from "react";
 import { AppContext } from "../App";
 import SectionHeader from "./SectionHeader/index";
+import data from "../services/trainers.json";
+import { FaFacebookF, FaLinkedinIn, FaBehance } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Trainers() {
   const { sectionRefs } = React.useContext(AppContext);
+  const trainersData = data.trainers;
+  const trainersCards = trainersData.map((trainer) => {
+    return (
+      <div key={trainer.id} className="trainer--card">
+        <img
+          className="trainer--image"
+          src={trainer.image}
+          alt={`Image of trainer ${trainer.name}`}
+        />
+        <div className="trainer--type">{trainer.type} trainer</div>
+        <div className="trainer--name">{trainer.name}</div>
+        <div className="trainer--details">{trainer.details}</div>
+        <div className="trainer--social">
+          <FaFacebookF className="trainer--facebook"/>
+          <FaXTwitter className="trainer--x"/>
+          <FaLinkedinIn className="trainer--in"/>
+          <FaBehance className="trainer--be"/>
+        </div>
+      </div>
+    );
+  });
   return (
     <section
       className="trainers"
@@ -20,6 +44,7 @@ export default function Trainers() {
             viverra ipsum dolor, ultricies fermentum massa consequat eu.
           </SectionHeader.Desc>
         </SectionHeader>
+        <div className="trainers--cards-container">{trainersCards}</div>
       </div>
     </section>
   );

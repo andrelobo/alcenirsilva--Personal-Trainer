@@ -20,10 +20,10 @@ export default function Trainers() {
         <div className="trainer--name">{trainer.name}</div>
         <div className="trainer--details">{trainer.details}</div>
         <div className="trainer--social">
-          <FaFacebookF className="trainer--facebook"/>
-          <FaXTwitter className="trainer--x"/>
-          <FaLinkedinIn className="trainer--in"/>
-          <FaBehance className="trainer--be"/>
+          <span><FaFacebookF className="trainer--facebook"/></span>
+          <span><FaXTwitter className="trainer--x"/></span>
+          <span><FaLinkedinIn className="trainer--in"/></span>
+          <span><FaBehance className="trainer--be"/></span>
         </div>
       </div>
     );

@@ -73,6 +73,7 @@ html.dark-mode ::-webkit-scrollbar-thumb {
 
 section {
   min-height: 100svh;
+  padding-bottom: 80px;
 }
 
 a {
@@ -456,7 +457,6 @@ nav .active {
 
 /* About Section */
 .about {
-  padding-bottom: 80px;
   padding-inline: 10px;
   background-color: var(--lightTheme-white);
 }
@@ -676,6 +676,167 @@ nav .active {
 }
 /* Classes Section */
 
+/* Schedules Section */
+.schedules {
+  background-image: url(./assets/images/schedule-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.schedules--normal-word {
+  color: var(--lightTheme-white);
+}
+.dark-theme .schedules--normal-word {
+  color: var(--darkTheme-text--white);
+}
+
+.schedules--days-filter {
+  margin-bottom: 50px;
+}
+
+.schedules--select-button {
+  width: 90%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  position: relative;
+  margin: auto;
+  border: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.schedules--select-arrow {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedules--days-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  padding-block: 5px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  border-radius: 0 0 5px 5px;
+  color: var(--lightTheme-white);
+
+  @media only screen and (min-width: 1014px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+  }
+}
+.dark-theme .schedules--days-list {
+  @media only screen and (min-width: 1014px) {
+    color: var(--darkTheme-text--white);
+  }
+}
+
+.schedules--dropdown-menu {
+  position: relative;
+  top: 100%;
+  animation: growDown 0.3s;
+  transform-origin: top center;
+
+  @media only screen and (max-width: 1013px) {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+.dark-theme .schedules--dropdown-menu {
+  @media only screen and (max-width: 1013px) {
+    background-color: var(--darkTheme-bg--white);
+  }
+}
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.schedules--day-item {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  height: fit-content;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+
+  @media only screen and (max-width: 1013px) {
+    background-color: var(--lightTheme-white);
+    color: var(--lightTheme-secondary-Color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  @media only screen and (min-width: 1014px) {
+    width: fit-content;
+  }
+}
+.dark-theme .schedules--day-item {
+  @media only screen and (max-width: 1013px) {
+    background-color: var(--darkTheme-bg--white);
+    box-shadow: 0px 0px 5px rgba(238, 96, 71, 0.15);
+    color: var(--darkTheme-secondary-Color);
+  }
+}
+
+.schedules--day-separator {
+  display: none;
+  @media only screen and (min-width: 1014px) {
+    display: block;
+  }
+}
+
+.schedules--day-item input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+}
+
+.schedules--day-item label {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.schedules--day-item input:focus + label,
+.schedules--day-item input:hover + label {
+  color: var(--lightTheme-orange);
+  transition: all 0.3s;
+}
+
+.schedules--day-item input:checked + label {
+  color: var(--lightTheme-orange);
+  font-weight: 700;
+  transition: all 0.3s;
+}
+/* Schedules Section */
+
 /* Trainers Section*/
 .trainers--cards-container {
   display: grid;
@@ -685,7 +846,7 @@ nav .active {
 
 .trainer--card {
   padding: 40px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 9px;
 }
 
@@ -722,7 +883,7 @@ nav .active {
   font-size: 14px;
   line-height: 25px;
   color: var(--lightTheme-gray);
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 .dark-theme .trainer--details {
   color: var(--darkTheme-text--gray);
@@ -733,17 +894,24 @@ nav .active {
   gap: 12px;
 }
 
-.trainer--social > * {
+.trainer--social span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
   cursor: pointer;
-  align-items: flex-end;
-  height: 16px;
   color: var(--lightTheme-secondary-Color);
+  transition: all 0.3s;
 }
-.dark-theme .trainer--social > * {
+.dark-theme .trainer--social span {
   color: var(--darkTheme-secondary-Color);
 }
 
-.trainer--be {
-  font-size: 20px;
+.trainer--social span:hover {
+  color: var(--lightTheme-orange);
 }
+.dark-theme .trainer--social span:hover {
+  color: var(--darkTheme-text--orange);
+}
+
 /* Trainers Section*/

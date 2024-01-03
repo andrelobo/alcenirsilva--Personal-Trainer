@@ -25,6 +25,9 @@ export default function App() {
     document.querySelector("html").classList.toggle("dark-mode");
   }
 
+  const windowWidth = window.innerWidth;
+  const isBigWindow = windowWidth > 1200 ? true : false;
+
   return (
     <AppContext.Provider
       value={{
@@ -34,6 +37,7 @@ export default function App() {
         theme,
         toggleTheme,
         sectionRefs,
+        isBigWindow
       }}
     >
       <div className={`${theme}`}>

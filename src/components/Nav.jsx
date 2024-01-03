@@ -8,7 +8,7 @@ import { FaTimes } from "react-icons/fa";
 
 export default function Nav() {
   const navRefs = React.useRef([]);
-  const { homeVisibility, sectionRefs } = React.useContext(AppContext);
+  const { homeVisibility, sectionRefs, isBigWindow } = React.useContext(AppContext);
   const navClass = homeVisibility ? "nav--absolute" : "nav--fixed";
 
   const [blockScroll, allowScroll] = useScrollBlock();
@@ -24,8 +24,6 @@ export default function Nav() {
       }
     }
   }
-  const windowWidth = window.innerWidth;
-  const isBigWindow = windowWidth > 1200 ? true : false;
 
   const menu_icon = showMenu ? (
     <FaTimes onClick={toggleMenu} className="menu--icon" />

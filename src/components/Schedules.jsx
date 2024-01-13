@@ -86,24 +86,6 @@ export default function Schedules() {
       }
     });
   });
-  /*
-    Small Screen:
-    - Each class will have its own card.
-    - which will be a carousel slider.
-    - card example:
-    |--------------------|
-    |   Fitness Class    |
-    | William G. Stewart |
-    |                    |
-    |********************|
-    |*   Dynamic Data   *|
-    |********************|
-    |                    |
-    |--------------------|
-
-    Large Screen:
-    -will be the same as in original template
-  */
 
   return (
     <section
@@ -114,7 +96,7 @@ export default function Schedules() {
       <div className="container">
         <SectionHeader>
           <SectionHeader.Title>
-            <span className="schedules--normal-word">CLASSES</span>{" "}
+            <span className="dark-bg--normal-word">CLASSES</span>{" "}
             <span className="orange--word">SCHEDULE</span>
           </SectionHeader.Title>
           <SectionHeader.Desc>

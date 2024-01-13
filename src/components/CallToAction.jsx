@@ -6,7 +6,9 @@ export default function CallToAction() {
     <div className="callToAction">
       <div className="container">
         <h2>
-          don't <span className="orange--word">think</span>, begin{" "}
+          <span className="dark-bg--normal-word">don't</span>{" "}
+          <span className="orange--word">think</span>,{" "}
+          <span className="dark-bg--normal-word">begin</span>{" "}
           <span className="orange--word">today</span>!
         </h2>
         <p>

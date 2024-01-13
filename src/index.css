@@ -82,6 +82,30 @@ a {
   text-decoration: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  -webkit-text-fill-color: var(--lightTheme-gray) !important;
+}
+.dark-theme input:-webkit-autofill,
+.dark-theme input:-webkit-autofill:hover,
+.dark-theme input:-webkit-autofill:focus,
+.dark-theme textarea:-webkit-autofill,
+.dark-theme textarea:-webkit-autofill:hover,
+.dark-theme textarea:-webkit-autofill:focus,
+.dark-theme select:-webkit-autofill,
+.dark-theme select:-webkit-autofill:hover,
+.dark-theme select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgb(24, 26, 27) inset !important;
+  -webkit-text-fill-color: var(--darkTheme-text--gray) !important;
+}
 /* General */
 
 /* Custom Components */
@@ -91,6 +115,10 @@ a {
 }
 /* Orange Word */
 /* Main Button */
+button.main--button {
+  border: none;
+}
+
 .main--button {
   display: inline-block;
   font-size: 15px;
@@ -154,6 +182,15 @@ a {
 .dark-theme .section--header p {
   color: var(--darkTheme-text--gray);
 }
+
+/* Dark Background Section Header */
+.dark-bg--normal-word {
+  color: var(--lightTheme-white);
+}
+.dark-theme .dark-bg--normal-word {
+  color: var(--darkTheme-text--white);
+}
+/* Dark Background Section Header */
 /* Section Header */
 
 /* Custom Components */
@@ -686,13 +723,6 @@ nav .active {
   background-position: center center;
 }
 
-.schedules--normal-word {
-  color: var(--lightTheme-white);
-}
-.dark-theme .schedules--normal-word {
-  color: var(--darkTheme-text--white);
-}
-
 .schedules--days-filter {
   margin-bottom: 25px;
   @media only screen and (max-width: 1199px) {
@@ -986,3 +1016,81 @@ nav .active {
 }
 
 /* Trainers Section*/
+
+/* Contact Section */
+.contact {
+  background-image: url(./assets/images/contact-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact--form {
+  background-color: var(--lightTheme-white);
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+
+  @media only screen and (min-width: 1200px) {
+    width: 70%;
+    padding: 30px;
+  }
+}
+.dark-theme .contact--form {
+  background-color: var(--darkTheme-bg--white);
+}
+
+.contact--form input {
+  color: var(--lightTheme-gray);
+  font-size: 13px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  height: 40px;
+  outline: none;
+  padding: 0px 10px;
+  appearance: none;
+}
+.dark-theme .contact--form input {
+  border-color: rgb(58, 62, 65);
+  background-color: rgb(24, 26, 27);
+  color: var(--darkTheme-text--gray);
+}
+
+.contact--form-userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: inherit;
+
+  @media only screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.contact--form-userInfo input {
+  width: 100%;
+}
+
+.contact fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.contact--form-message {
+  width: 100%;
+  height: 150px;
+  padding: 7px;
+  color: var(--lightTheme-gray);
+  outline: none;
+  border: 1px solid #ddd;
+  resize: none;
+}
+.dark-theme .contact--form-message {
+  border-color: rgb(58, 62, 65);
+  background-color: rgb(24, 26, 27);
+  color: var(--darkTheme-text--gray);
+}
+/* Contact Section */

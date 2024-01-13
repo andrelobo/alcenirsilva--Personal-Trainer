@@ -26,7 +26,7 @@ export default function App() {
   }
 
   const windowWidth = window.innerWidth;
-  const isBigWindow = windowWidth > 1200 ? true : false;
+  const isBigWindow = windowWidth >= 1200 ? true : false;
 
   return (
     <AppContext.Provider

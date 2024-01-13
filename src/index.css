@@ -73,6 +73,8 @@ html.dark-mode ::-webkit-scrollbar-thumb {
 
 section {
   min-height: 100svh;
+}
+section:not(.home) {
   padding-bottom: 80px;
 }
 
@@ -331,7 +333,7 @@ nav .active {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
   .nav--rightside-group {
     display: flex;
   }
@@ -692,11 +694,19 @@ nav .active {
 }
 
 .schedules--days-filter {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  @media only screen and (max-width: 1199px) {
+    position: relative;
+    width: 90%;
+    margin-inline: auto;
+  }
+  @media only screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .schedules--select-button {
-  width: 90%;
+  width: 100%;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -731,7 +741,7 @@ nav .active {
   border-radius: 0 0 5px 5px;
   color: var(--lightTheme-white);
 
-  @media only screen and (min-width: 1014px) {
+  @media only screen and (min-width: 1200px) {
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -739,7 +749,7 @@ nav .active {
   }
 }
 .dark-theme .schedules--days-list {
-  @media only screen and (min-width: 1014px) {
+  @media only screen and (min-width: 1200px) {
     color: var(--darkTheme-text--white);
   }
 }
@@ -750,12 +760,14 @@ nav .active {
   animation: growDown 0.3s;
   transform-origin: top center;
 
-  @media only screen and (max-width: 1013px) {
+  @media only screen and (max-width: 1199px) {
     background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    width: 100%;
   }
 }
 .dark-theme .schedules--dropdown-menu {
-  @media only screen and (max-width: 1013px) {
+  @media only screen and (max-width: 1199px) {
     background-color: var(--darkTheme-bg--white);
   }
 }
@@ -782,18 +794,18 @@ nav .active {
   width: 100%;
   border-radius: 5px;
 
-  @media only screen and (max-width: 1013px) {
+  @media only screen and (max-width: 1199px) {
     background-color: var(--lightTheme-white);
     color: var(--lightTheme-secondary-Color);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
   }
 
-  @media only screen and (min-width: 1014px) {
+  @media only screen and (min-width: 1200px) {
     width: fit-content;
   }
 }
 .dark-theme .schedules--day-item {
-  @media only screen and (max-width: 1013px) {
+  @media only screen and (max-width: 1199px) {
     background-color: var(--darkTheme-bg--white);
     box-shadow: 0px 0px 5px rgba(238, 96, 71, 0.15);
     color: var(--darkTheme-secondary-Color);
@@ -802,7 +814,7 @@ nav .active {
 
 .schedules--day-separator {
   display: none;
-  @media only screen and (min-width: 1014px) {
+  @media only screen and (min-width: 1200px) {
     display: block;
   }
 }
@@ -824,7 +836,6 @@ nav .active {
   padding: 10px;
 }
 
-.schedules--day-item input:focus + label,
 .schedules--day-item input:hover + label {
   color: var(--lightTheme-orange);
   transition: all 0.3s;
@@ -835,6 +846,66 @@ nav .active {
   font-weight: 700;
   transition: all 0.3s;
 }
+
+.schedules--timetable {
+  display: flex;
+  flex-direction: column;
+}
+
+.timetable--classContent {
+  display: flex;
+}
+
+.timetable--classContent > div {
+  width: 100px;
+  height: 100px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  border: 1px solid var(--lightTheme-white);
+  color: var(--lightTheme-white);
+}
+.dark-theme .timetable--classContent > div {
+  color: var(--darkTheme-secondary-Color);
+  border-color: var(--darkTheme-secondary-Color);
+}
+/* Timetable borders adjustments */
+@media only screen and (min-width: 1200px) {
+  .timetable--classContent > div:not(:last-child) {
+    border-right: none;
+  }
+  .timetable--classContent:not(:last-child) > div {
+    border-bottom: none;
+  }
+}
+/* Timetable borders adjustments */
+
+/* Media Query Timetable For Small Screens */
+@media only screen and (max-width: 1199px) {
+  .schedules--timetable {
+    padding-inline: 10px;
+    gap: 10px;
+  }
+
+  .timetable--classContent {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .timetable--classContent > div {
+    width: 100%;
+    padding: 5px;
+  }
+  /* Timetable borders adjustments */
+  .timetable--classContent > div:not(:last-child) {
+    border-bottom: none;
+  }
+  /* Timetable borders adjustments */
+}
+/* Media Query Timetable For Small Screens */
+
 /* Schedules Section */
 
 /* Trainers Section*/

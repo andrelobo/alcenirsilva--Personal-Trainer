@@ -3,9 +3,7 @@ import { FaRegSun, FaRegMoon } from "react-icons/fa6";
 import { AppContext } from "../../App";
 
 export default function ToggleTheme() {
-  const { toggleTheme, theme } = React.useContext(AppContext);
-  const windowWidth = window.innerWidth;
-  const isBigWindow = windowWidth > 1200 ? true : false;
+  const { toggleTheme, theme, isBigWindow } = React.useContext(AppContext);
 
   const toggle_small =
     theme === "light-theme" ? (

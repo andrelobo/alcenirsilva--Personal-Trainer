@@ -16,13 +16,24 @@ export default function App() {
   const homeRef = React.useRef();
   const [homeVisibility, setHomeVisibility] = React.useState(true);
 
-  const [theme, setTheme] = React.useState("light-theme");
+  if (!localStorage.getItem("theme")) {
+    localStorage.setItem("theme", "light-theme");
+  }
+  const [theme, setTheme] = React.useState(
+    localStorage.getItem("theme") || "light-theme"
+  );
   function toggleTheme() {
-    setTheme((prevTheme) =>
-      prevTheme === "light-theme" ? "dark-theme" : "light-theme"
-    );
-    // For changing scrollbar colors between light & dark modes
-    document.querySelector("html").classList.toggle("dark-mode");
+    setTheme((prevTheme) => {
+      if (prevTheme === "light-theme") {
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark-theme");
+        return "dark-theme";
+      } else {
+        document.body.classList.remove("dark-mode");
+        localStorage.setItem("theme", "light-theme");
+        return "light-theme";
+      }
+    });
   }
 
   const windowWidth = window.innerWidth;
@@ -37,7 +48,7 @@ export default function App() {
         theme,
         toggleTheme,
         sectionRefs,
-        isBigWindow
+        isBigWindow,
       }}
     >
       <div className={`${theme}`}>

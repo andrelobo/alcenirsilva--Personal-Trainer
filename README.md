@@ -1,11 +1,16 @@
-# Demo
-https://matthew-19.github.io/TrainingStudio/
+# TrainingStudio Template 
+### A multi-section one-page ReactJS Template
 
-# React + Vite
+Suitable for gym, fitness club, and Yoga club websites. This one Page template is built on React working in [Vite](https://vitejs.dev/). This layout has a video background banner, content tabs, schedule table, and contact form. You can adapt any section or content as you wish.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Preview Link https://matthew-19.github.io/TrainingStudio/
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features
+
+- 📱Fully Responsive
+- 🌙 Dark Mode
+- 💥Dynamic Navigation Bar
+  - Section NavLink highlighted for currently visible section.
+- 🛠️ Edit Template Data
+  - Can change various data, found in JSON files, of the template sections

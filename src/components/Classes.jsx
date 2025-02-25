@@ -20,7 +20,7 @@ export default function Classes() {
         className={`classes--card ${activeClassStyle}`}
         onClick={() => chooseClass(classItem.id)}
       >
-        <img src={dumbbell} alt="icon" />
+        <img src={dumbbell} alt="ícone" />
         {classItem.name}
       </div>
     );
@@ -33,21 +33,21 @@ export default function Classes() {
         <div className="classes--class-image">
           <img
             src={classItem.image}
-            alt="class--card-img"
+            alt="Imagem da aula"
             className="classes--img"
           />
         </div>
         <div className="classes--class-name">{classItem.name}</div>
         <div className="classes--class-details">{classItem.details}</div>
         <div className="main--button classes--classPreview-btn">
-          view schedule
+          Ver horários
         </div>
       </div>
     );
   });
   const displayClassesPreview = classesPreview.filter(classItem => {
-    return classItem.props.id === activeClassId
-  })
+    return classItem.props.id === activeClassId;
+  });
 
   return (
     <section
@@ -58,18 +58,18 @@ export default function Classes() {
       <div className="container">
         <SectionHeader>
           <SectionHeader.Title>
-            OUR <span className="orange--word">CLASSES</span>
+            NOSSAS <span className="orange--word">AULAS</span>
           </SectionHeader.Title>
           <SectionHeader.Desc>
-            Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed
-            viverra ipsum dolor, ultricies fermentum massa consequat eu.
+            Oferecemos aulas personalizadas para atender seus objetivos. 
+            Escolha a melhor opção e comece a sua jornada para uma vida mais saudável!
           </SectionHeader.Desc>
         </SectionHeader>
         <div className="classes--main">
           <div className="classes--list">
             {displayClassesCards}
             <div className="main--button classes--main-btn">
-              view all schedules
+              Ver todos os horários
             </div>
           </div>
           {displayClassesPreview}

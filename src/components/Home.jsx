@@ -27,13 +27,16 @@ export default function Home() {
       <video autoPlay loop muted src={gymVideo} className="home--video"></video>
       <div className="container">
         <div className="home--caption">
-          <h6>work harder, get stronger</h6>
+          <h6>Treine com foco, evolua sempre</h6>
           <h2>
-            easy with our <span className="orange--word">gym</span>
+            Seu melhor com um{" "}
+            <span className="orange--word">Personal Trainer</span>
           </h2>
         </div>
-        <MainButton>become a member</MainButton>
+        <MainButton>Iniciar</MainButton>
       </div>
     </section>
-  );
+);
+
+
 }

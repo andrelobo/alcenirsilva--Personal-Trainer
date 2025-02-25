@@ -1,21 +1,21 @@
 /* Variables */
 :root {
   /* LightTheme */
-  --lightTheme-overlay-color: rgba(35, 45, 57, 0.8);
-  --lightTheme-orange: #ed563b;
+  --lightTheme-overlay-color: rgba(4, 4, 4, 0.8); /* #040404 com 80% de opacidade */
+  --lightTheme-green: #abd084;
   --lightTheme-white: #fff;
-  --lightTheme-gray: #7a7a7a;
-  --lightTheme-hover-orange: rgb(164, 38, 15);
-  --lightTheme-secondary-Color: #232d39;
+  --lightTheme-gray: #757575;
+  --lightTheme-hover-green: #8fb86d; /* Uma tonalidade mais escura de #abd084 */
+  --lightTheme-secondary-Color: #425134;
 
   /* DarkTheme */
-  --darkTheme-overlay-color: rgba(28, 36, 46, 0.8);
-  --darkTheme-bg--orange: #a4260f;
-  --darkTheme-text--orange: #ee6047;
-  --darkTheme-bg--white: #181a1b;
+  --darkTheme-overlay-color: rgba(4, 4, 4, 0.9); /* #040404 com 90% de opacidade */
+  --darkTheme-bg--green: #8fb86d; /* Uma tonalidade mais escura de #abd084 */
+  --darkTheme-text--green: #abd084;
+  --darkTheme-bg--white: #040404; /* #040404 */
   --darkTheme-text--white: #e8e6e3;
-  --darkTheme-text--gray: #9b9285;
-  --darkTheme-bg--hover-orange: #831e0c;
+  --darkTheme-text--gray: #6c6c6c;
+  --darkTheme-bg--hover-green: #7aa05c; /* Uma tonalidade mais escura de #8fb86d */
   --darkTheme-secondary-Color: #cbc6c0;
 }
 /* Variables */
@@ -39,11 +39,11 @@ body {
 }
 
 ::selection {
-  background-color: var(--lightTheme-orange);
+  background-color: var(--lightTheme-green);
   color: var(--lightTheme-white);
 }
 .dark-theme ::selection {
-  background-color: var(--darkTheme-bg--orange);
+  background-color: var(--darkTheme-bg--green);
   color: var(--darkTheme-text--white);
 }
 
@@ -103,17 +103,17 @@ select:-webkit-autofill:focus {
 .dark-theme select:-webkit-autofill,
 .dark-theme select:-webkit-autofill:hover,
 .dark-theme select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px rgb(24, 26, 27) inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgb(4, 4, 4) inset !important;
   -webkit-text-fill-color: var(--darkTheme-text--gray) !important;
 }
 /* General */
 
 /* Custom Components */
-/* Orange Word */
-.orange--word {
-  color: var(--lightTheme-orange) !important;
+/* Green Word */
+.green--word {
+  color: var(--lightTheme-green) !important;
 }
-/* Orange Word */
+/* Green Word */
 /* Main Button */
 button.main--button {
   border: none;
@@ -123,7 +123,7 @@ button.main--button {
   display: inline-block;
   font-size: 15px;
   padding: 12px 20px;
-  background-color: var(--lightTheme-orange);
+  background-color: var(--lightTheme-green);
   color: var(--lightTheme-white);
   font-weight: 400;
   text-transform: uppercase;
@@ -134,15 +134,15 @@ button.main--button {
   user-select: none;
 }
 .main--button:hover {
-  background-color: var(--lightTheme-hover-orange);
+  background-color: var(--lightTheme-hover-green);
 }
 
 .dark-theme .main--button {
-  background-color: var(--darkTheme-bg--orange);
+  background-color: var(--darkTheme-bg--green);
   color: var(--darkTheme-text--white);
 }
 .dark-theme .main--button:hover {
-  background-color: var(--darkTheme-bg--hover-orange);
+  background-color: var(--darkTheme-bg--hover-green);
 }
 /* Main Button */
 /* Section Header */
@@ -257,7 +257,7 @@ nav li {
 }
 
 nav li:hover .nav--link:not(.signup--btn) {
-  color: var(--lightTheme-orange) !important;
+  color: var(--lightTheme-green) !important;
 }
 
 .nav--link {
@@ -274,18 +274,18 @@ nav li:hover .nav--link:not(.signup--btn) {
 }
 
 nav .signup--btn {
-  background-color: var(--lightTheme-orange) !important;
+  background-color: var(--lightTheme-green) !important;
   border-radius: 4px;
 }
 .dark-theme nav .signup--btn {
-  background-color: var(--darkTheme-bg--orange) !important;
+  background-color: var(--darkTheme-bg--green) !important;
 }
 
 nav .signup--btn:hover {
-  background-color: var(--lightTheme-hover-orange) !important;
+  background-color: var(--lightTheme-hover-green) !important;
 }
 .dark-theme nav .signup--btn:hover {
-  background-color: var(--darkTheme-bg--hover-orange) !important;
+  background-color: var(--darkTheme-bg--hover-green) !important;
 }
 
 .toggle--theme {
@@ -305,7 +305,7 @@ nav .signup--btn:hover {
 }
 
 nav .active {
-  color: var(--lightTheme-orange) !important;
+  color: var(--lightTheme-green) !important;
   font-weight: bold;
 }
 
@@ -431,7 +431,7 @@ nav .active {
   }
   .dark-theme .nav--fixed .nav--list .nav--link {
     background-color: var(--darkTheme-bg--white);
-    box-shadow: 0px 0px 5px rgba(238, 96, 71, 0.15);
+    box-shadow: 0px 0px 5px rgba(171, 208, 132, 0.15);
   }
 }
 /* Nav Media Queries */
@@ -548,7 +548,7 @@ nav .active {
 .about--card a {
   font-size: 13px;
   text-transform: uppercase;
-  color: var(--lightTheme-orange);
+  color: var(--lightTheme-green);
   font-weight: 500;
   cursor: pointer;
   width: fit-content;
@@ -648,16 +648,16 @@ nav .active {
 }
 
 .classes--card.active {
-  box-shadow: 0px 0px 5px 3px rgba(238, 96, 71, 0.5);
-  color: var(--lightTheme-orange);
+  box-shadow: 0px 0px 5px 3px rgba(171, 208, 132, 0.5); /* #abd084 com 50% de opacidade */
+  color: var(--lightTheme-green);
 }
 .dark-theme .classes--card.active {
-  color: var(--darkTheme-text--orange);
+  color: var(--darkTheme-text--green);
 }
 
 .classes--card:hover:not(.classes--card.active) {
   transform: translateY(-2px);
-  box-shadow: 0px 0px 5px 1px rgba(238, 96, 71, 0.5);
+  box-shadow: 0px 0px 5px 1px rgba(171, 208, 132, 0.5); /* #abd084 com 50% de opacidade */
 }
 
 .classes--main-btn {
@@ -837,7 +837,7 @@ nav .active {
 .dark-theme .schedules--day-item {
   @media only screen and (max-width: 1199px) {
     background-color: var(--darkTheme-bg--white);
-    box-shadow: 0px 0px 5px rgba(238, 96, 71, 0.15);
+    box-shadow: 0px 0px 5px rgba(171, 208, 132, 0.15);
     color: var(--darkTheme-secondary-Color);
   }
 }
@@ -867,12 +867,12 @@ nav .active {
 }
 
 .schedules--day-item input:hover + label {
-  color: var(--lightTheme-orange);
+  color: var(--lightTheme-green);
   transition: all 0.3s;
 }
 
 .schedules--day-item input:checked + label {
-  color: var(--lightTheme-orange);
+  color: var(--lightTheme-green);
   font-weight: 700;
   transition: all 0.3s;
 }
@@ -959,7 +959,7 @@ nav .active {
 }
 
 .trainer--type {
-  color: var(--lightTheme-orange);
+  color: var(--lightTheme-green);
   font-size: 13px;
   font-weight: 500;
   margin-top: 25px;
@@ -967,7 +967,7 @@ nav .active {
   text-transform: capitalize;
 }
 .dark-theme .trainer--type {
-  color: var(--darkTheme-text--orange);
+  color: var(--darkTheme-text--green);
 }
 
 .trainer--name {
@@ -1010,10 +1010,10 @@ nav .active {
 }
 
 .trainer--social span:hover {
-  color: var(--lightTheme-orange);
+  color: var(--lightTheme-green);
 }
 .dark-theme .trainer--social span:hover {
-  color: var(--darkTheme-text--orange);
+  color: var(--darkTheme-text--green);
 }
 
 /* Trainers Section*/

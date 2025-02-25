@@ -6,17 +6,16 @@ export default function CallToAction() {
     <div className="callToAction">
       <div className="container">
         <h2>
-          <span className="dark-bg--normal-word">don't</span>{" "}
-          <span className="orange--word">think</span>,{" "}
-          <span className="dark-bg--normal-word">begin</span>{" "}
-          <span className="orange--word">today</span>!
+          <span className="dark-bg--normal-word">não</span>{" "}
+          <span className="orange--word">pense</span>,{" "}
+          <span className="dark-bg--normal-word">comece</span>{" "}
+          <span className="orange--word">hoje</span>!
         </h2>
         <p>
-          Ut consectetur, metus sit amet aliquet placerat, enim est ultricies
-          ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a
-          nisi luctus imperdiet.
+          Alcance seus objetivos com dedicação e treino personalizado. 
+          Supere desafios e transforme sua vida com um Personal Trainer.
         </p>
-        <MainButton>become a member</MainButton>
+        <MainButton>Comece agora</MainButton>
       </div>
     </div>
   );

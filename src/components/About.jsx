@@ -15,80 +15,80 @@ export default function About() {
       <div className="container">
         <SectionHeader>
           <SectionHeader.Title>
-            choose <span className="orange--word">program</span>
+            escolha o <span className="orange--word">programa</span>
           </SectionHeader.Title>
           <SectionHeader.Desc>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
-            incidunt blanditiis autem at alias earum nobis ad eos doloremque
-            quod totam, culpa sapiente quam harum provident dolores aliquid
-            voluptatum dolor.
+            O treinamento personalizado é essencial para alcançar seus objetivos 
+            de forma eficiente e segura. Com a orientação de um Personal Trainer, 
+            você terá um plano de exercícios adaptado às suas necessidades, 
+            melhorando sua saúde, força e condicionamento físico.
           </SectionHeader.Desc>
         </SectionHeader>
         <div className="about--card-container">
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Basic Fitness</div>
+              <div className="card--title">Treinamento Básico</div>
               <div className="card--desc">
-                Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
-                nisi. Integer nibh sapien, vehicula et auctor.
+                Ideal para iniciantes, focado no fortalecimento muscular e na 
+                melhoria da resistência física com exercícios simples e eficazes.
               </div>
-              <a>discover more</a>
+              <a>saiba mais</a>
             </div>
           </div>
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Advanced Muscle Course</div>
+              <div className="card--title">Treinamento Avançado de Força</div>
               <div className="card--desc">
-                Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
-                nisi. Integer nibh sapien, vehicula et auctor.
+                Para quem já tem experiência e deseja aprimorar a hipertrofia 
+                muscular e a potência física com treinos intensos.
               </div>
-              <a>discover more</a>
+              <a>saiba mais</a>
             </div>
           </div>
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">New Gym Training</div>
+              <div className="card--title">Treino de Academia</div>
               <div className="card--desc">
-                Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
-                nisi. Integer nibh sapien, vehicula et auctor.
+                Um programa completo para quem deseja melhorar o desempenho 
+                na academia com exercícios de musculação e cardio.
               </div>
-              <a>discover more</a>
+              <a>saiba mais</a>
             </div>
           </div>
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Yoga Training</div>
+              <div className="card--title">Yoga e Flexibilidade</div>
               <div className="card--desc">
-                Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
-                nisi. Integer nibh sapien, vehicula et auctor.
+                Um programa voltado para o equilíbrio entre corpo e mente, 
+                com exercícios de alongamento, respiração e relaxamento.
               </div>
-              <a>discover more</a>
+              <a>saiba mais</a>
             </div>
           </div>
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Basic Muscle Course</div>
+              <div className="card--title">Curso de Musculação Básica</div>
               <div className="card--desc">
-                Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
-                nisi. Integer nibh sapien, vehicula et auctor.
+                Programa introdutório para quem deseja ganhar força e 
+                definição muscular com exercícios progressivos.
               </div>
-              <a>discover more</a>
+              <a>saiba mais</a>
             </div>
           </div>
           <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
-              <div className="card--title">Body Building Course</div>
+              <div className="card--title">Treinamento para Fisiculturismo</div>
               <div className="card--desc">
-                Suspendisse fringilla et nisi et mattis. Curabitur sed finibus
-                nisi. Integer nibh sapien, vehicula et auctor.
+                Para atletas e entusiastas do fisiculturismo que buscam 
+                um programa especializado para maximizar ganhos musculares.
               </div>
-              <a>discover more</a>
+              <a>saiba mais</a>
             </div>
           </div>
         </div>

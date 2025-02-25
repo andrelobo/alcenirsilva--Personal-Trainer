@@ -89,7 +89,7 @@ export default function Nav() {
               href="#home"
               ref={(element) => (navRefs.current[0] = element)}
             >
-              home
+              início
             </a>
           </li>
           <li onClick={toggleMenu}>
@@ -98,7 +98,7 @@ export default function Nav() {
               href="#about"
               ref={(element) => (navRefs.current[1] = element)}
             >
-              about
+              sobre
             </a>
           </li>
           <li onClick={toggleMenu}>
@@ -107,7 +107,7 @@ export default function Nav() {
               href="#classes"
               ref={(element) => (navRefs.current[2] = element)}
             >
-              classes
+              aulas
             </a>
           </li>
           <li onClick={toggleMenu}>
@@ -116,7 +116,7 @@ export default function Nav() {
               href="#schedules"
               ref={(element) => (navRefs.current[3] = element)}
             >
-              schedules
+              agendamentos
             </a>
           </li>
           <li onClick={toggleMenu}>
@@ -134,12 +134,12 @@ export default function Nav() {
               href="#contact"
               ref={(element) => (navRefs.current[5] = element)}
             >
-              contact
+              contato
             </a>
           </li>
           <li>
             <a className="nav--link signup--btn" href="#">
-              sign up
+              assine
             </a>
           </li>
         </ul>

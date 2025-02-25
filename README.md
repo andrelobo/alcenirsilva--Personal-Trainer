@@ -14,3 +14,4 @@ Suitable for gym, fitness club, and Yoga club websites. This layout has a video 
   - Section NavLink highlighted for currently visible section.
 - 🛠️ Edit Template Data
   - Can change various data, found in JSON files, of the template sections
+# alcenirsilva--Personal-Trainer

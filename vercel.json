@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/assets/*.css",
+      "source": "/assets/:all*.css",
       "headers": [
         {
           "key": "Content-Type",
@@ -10,7 +10,7 @@
       ]
     },
     {
-      "source": "/assets/*.js",
+      "source": "/assets/:all*.js",
       "headers": [
         {
           "key": "Content-Type",

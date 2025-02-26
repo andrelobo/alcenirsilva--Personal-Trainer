@@ -1,7 +1,16 @@
 {
   "headers": [
     {
-      "source": "/assets/:path*",
+      "source": "/assets/*.css",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css"
+        }
+      ]
+    },
+    {
+      "source": "/assets/*.js",
       "headers": [
         {
           "key": "Content-Type",

@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // Usa "./" para compatibilidade com caminhos relativos
+  base: "./", // Mantém caminhos relativos para evitar problemas no deploy
   build: {
     outDir: "dist",
     assetsDir: "assets",
@@ -12,5 +12,3 @@ export default defineConfig({
     open: true,
   },
 });
-
-

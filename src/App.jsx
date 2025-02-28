@@ -3,9 +3,9 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 import CallToAction from "./components/CallToAction";
-import Classes from "./components/Classes";
+
 import Schedules from "./components/Schedules";
-import Trainers from "./components/Trainers";
+
 import Contact from "./components/Contact";
 
 const AppContext = React.createContext();
@@ -55,10 +55,8 @@ export default function App() {
         <Nav />
         <Home />
         <About />
-        <CallToAction />
-        <Classes />
-        <Schedules />
-        <Trainers />
+        <CallToAction />  
+            
         <Contact />
       </div>
     </AppContext.Provider>

@@ -79,7 +79,7 @@ export default function Nav() {
       <div className="container">
       <div className="nav--logo">
   <a className="nav--link" href="#home">
-    <img src="./src/assets/logo.png" alt="Logo" className="nav--logo-img" />
+  <img src="/logo.png" alt="Logo" className="nav--logo-img" />
   </a>
 </div>
         <ul style={navStyles} className="nav--list slidein">

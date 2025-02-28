@@ -58,18 +58,7 @@ export default function About() {
               <a>saiba mais</a>
             </div>
           </div>
-          <div className="about--card">
-            <img className="about--card-img" src={dumbbell} alt="dumbbell" />
-            <div className="about--card-content">
-              <div className="card--title">Yoga e Flexibilidade</div>
-              <div className="card--desc">
-                Um programa voltado para o equilíbrio entre corpo e mente, 
-                com exercícios de alongamento, respiração e relaxamento.
-              </div>
-              <a>saiba mais</a>
-            </div>
-          </div>
-          <div className="about--card">
+            <div className="about--card">
             <img className="about--card-img" src={dumbbell} alt="dumbbell" />
             <div className="about--card-content">
               <div className="card--title">Curso de Musculação Básica</div>
@@ -80,17 +69,7 @@ export default function About() {
               <a>saiba mais</a>
             </div>
           </div>
-          <div className="about--card">
-            <img className="about--card-img" src={dumbbell} alt="dumbbell" />
-            <div className="about--card-content">
-              <div className="card--title">Treinamento para Fisiculturismo</div>
-              <div className="card--desc">
-                Para atletas e entusiastas do fisiculturismo que buscam 
-                um programa especializado para maximizar ganhos musculares.
-              </div>
-              <a>saiba mais</a>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

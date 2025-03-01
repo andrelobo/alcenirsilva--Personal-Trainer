@@ -3,8 +3,9 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 import CallToAction from "./components/CallToAction";
+import Footer from "./components/Footer"
 
-import Schedules from "./components/Schedules";
+
 
 import Contact from "./components/Contact";
 
@@ -55,9 +56,9 @@ export default function App() {
         <Nav />
         <Home />
         <About />
-        <CallToAction />  
-            
+        <CallToAction />              
         <Contact />
+        <Footer />
       </div>
     </AppContext.Provider>
   );

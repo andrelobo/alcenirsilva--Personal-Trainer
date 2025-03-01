@@ -1,9 +1,15 @@
 import React from "react";
 import SectionHeader from "./SectionHeader/index";
 import { AppContext } from "../App";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   const { sectionRefs } = React.useContext(AppContext);
+  
+  function handleWhatsAppClick() {
+    window.location.href = "https://wa.me/seu-numero-aqui";
+  }
+
   return (
     <section
       className="contact"
@@ -13,52 +19,24 @@ export default function Contact() {
       <div className="container">
         <SectionHeader>
           <SectionHeader.Title>
-            <span className="dark-bg--normal-word">Stay</span>{" "}
-            <span className="orange--word">Connected</span>
+            <span className="dark-bg--normal-word">Fique</span>{" "}
+            <span className="orange--word">Conectado</span>
           </SectionHeader.Title>
           <SectionHeader.Desc>
-            Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed
-            viverra ipsum dolor, ultricies fermentum massa consequat eu.
+            Entre em contato conosco pelas redes sociais ou pelo WhatsApp!
           </SectionHeader.Desc>
         </SectionHeader>
 
-        <div className="contact--form">
-          <div className="contact--form-userInfo">
-            <input
-              type="text"
-              placeholder="Your Name*"
-              name="username"
-              id="username"
-              className="contact--form-username"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Your Email*"
-              name="email"
-              id="email"
-              className="contact--form-email"
-              required
-            />
-          </div>
-          <input
-            type="text"
-            placeholder="Subject"
-            name="subject"
-            id="subject"
-            className="contact--form-subject"
-            required
-          />
-          <fieldset>
-            <textarea
-              placeholder="Message"
-              name="message"
-              id="message"
-              className="contact--form-message"
-              required
-            ></textarea>
-          </fieldset>
-          <button className="main--button">send message</button>
+        <div className="contact--icons" style={{ display: "flex", gap: "20px", justifyContent: "center", marginTop: "20px" }}>
+          <a href="https://facebook.com/seu-perfil" target="_blank" rel="noopener noreferrer">
+            <FaFacebook size={40} color="#4267B2" />
+          </a>
+          <a href="https://instagram.com/seu-perfil" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={40} color="#E1306C" />
+          </a>
+          <button onClick={handleWhatsAppClick} style={{ background: "none", border: "none", cursor: "pointer" }}>
+            <FaWhatsapp size={40} color="#25D366" />
+          </button>
         </div>
       </div>
     </section>

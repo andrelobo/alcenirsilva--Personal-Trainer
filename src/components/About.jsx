@@ -33,7 +33,7 @@ export default function About() {
                 Ideal para iniciantes, focado no fortalecimento muscular e na 
                 melhoria da resistência física com exercícios simples e eficazes.
               </div>
-              <a>saiba mais</a>
+             
             </div>
           </div>
           <div className="about--card">
@@ -44,7 +44,6 @@ export default function About() {
                 Para quem já tem experiência e deseja aprimorar a hipertrofia 
                 muscular e a potência física com treinos intensos.
               </div>
-              <a>saiba mais</a>
             </div>
           </div>
           <div className="about--card">
@@ -55,7 +54,6 @@ export default function About() {
                 Um programa completo para quem deseja melhorar o desempenho 
                 na academia com exercícios de musculação e cardio.
               </div>
-              <a>saiba mais</a>
             </div>
           </div>
             <div className="about--card">
@@ -66,7 +64,6 @@ export default function About() {
                 Programa introdutório para quem deseja ganhar força e 
                 definição muscular com exercícios progressivos.
               </div>
-              <a>saiba mais</a>
             </div>
           </div>
           

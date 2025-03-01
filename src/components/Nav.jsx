@@ -1,7 +1,6 @@
 import React from "react";
 import { AppContext } from "../App";
-import ToggleTheme from "./ToggleTheme/ToggleTheme";
-import "./ToggleTheme/ToggleTheme.css";
+import "./ToggleTheme/ToggleTheme.css"; // Pode ser removido
 import useScrollBlock from "../services/useScrollBlock";
 import { FiMenu } from "react-icons/fi";
 import { FaTimes } from "react-icons/fa";
@@ -37,10 +36,7 @@ export default function Nav() {
   const [visibleSections, setVisibleSections] = React.useState({
     home: false,
     about: false,
-    classes: false,
-    schedules: false,
-    trainers: false,
-    contact: false,
+    contact: false,  // Mantivemos apenas o "contact"
   });
   const visibleSectionsArray = Object.entries(visibleSections);
 
@@ -75,13 +71,13 @@ export default function Nav() {
   }, [visibleSections]);
 
   return (
-    <nav className={`${navClass}`}>
+    <nav className={`${navClass} nav--black`}>  {/* Adicionei a classe nav--black */}
       <div className="container">
-      <div className="nav--logo">
-  <a className="nav--link" href="#home">
-  <img src="/logo.png" alt="Logo" className="nav--logo-img" />
-  </a>
-</div>
+        <div className="nav--logo">
+          <a className="nav--link" href="#home">
+            <img src="/logo.png" alt="Logo" className="nav--logo-img" />
+          </a>
+        </div>
         <ul style={navStyles} className="nav--list slidein">
           <li onClick={toggleMenu}>
             <a
@@ -101,53 +97,28 @@ export default function Nav() {
               sobre
             </a>
           </li>
-          <li onClick={toggleMenu}>
-            <a
-              className="nav--link"
-              href="#classes"
-              ref={(element) => (navRefs.current[2] = element)}
-            >
-              aulas
-            </a>
-          </li>
-          <li onClick={toggleMenu}>
-            <a
-              className="nav--link"
-              href="#schedules"
-              ref={(element) => (navRefs.current[3] = element)}
-            >
-              agendamentos
-            </a>
-          </li>
-          <li onClick={toggleMenu}>
-            <a
-              className="nav--link"
-              href="#trainers"
-              ref={(element) => (navRefs.current[4] = element)}
-            >
-              trainers
-            </a>
-          </li>
+          {/* Removidos os links de aulas, agendamentos e trainers */}
           <li onClick={toggleMenu}>
             <a
               className="nav--link"
               href="#contact"
-              ref={(element) => (navRefs.current[5] = element)}
+              ref={(element) => (navRefs.current[2] = element)}
             >
               contato
             </a>
           </li>
-          <li>
-            <a className="nav--link signup--btn" href="#">
-              assine
-            </a>
-          </li>
+                  <li>
+          <a className="nav--link signup--btn" href="#">
+            Acesse sua conta
+          </a>
+        </li>
+
         </ul>
         {isBigWindow ? (
-          <ToggleTheme />
+          // Removido o ToggleTheme
+          <></>
         ) : (
           <div className="nav--rightside-group">
-            <ToggleTheme />
             {menu_icon}
           </div>
         )}

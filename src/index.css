@@ -1,7 +1,7 @@
 /* Variables */
 :root {
   /* LightTheme */
-  --lightTheme-overlay-color: rgba(4, 4, 4, 0.8); /* #040404 com 80% de opacidade */
+  --lightTheme-overlay-color: rgba(0, 0, 0, 0.5); /* #040404 com 80% de opacidade */
   --lightTheme-green: #abd084;
   --lightTheme-white: #fff;
   --lightTheme-gray: #757575;
@@ -314,7 +314,7 @@ nav .active {
   position: fixed;
   animation-duration: 1s;
   animation-name: slideIn;
-  background-color: var(--lightTheme-white);
+  background-color:  #040404;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 @keyframes slideIn {
@@ -497,7 +497,7 @@ nav .active {
 /* About Section */
 .about {
   padding-inline: 10px;
-  background-color: var(--lightTheme-white);
+  background-color: var(--darkTheme-bg--white);
 }
 .dark-theme .about {
   background-color: var(--darkTheme-bg--white);
